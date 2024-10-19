@@ -37,7 +37,7 @@ public class MailService {
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
             helper.setTo(mail.getEmailToSend());
-            helper.setSubject("Рекомендации чата ассистента");
+            helper.setSubject("Ваш результат и Рекомендации от нашего психолога");
             helper.setText(mail.getText());
 
             mailSender.send(message);

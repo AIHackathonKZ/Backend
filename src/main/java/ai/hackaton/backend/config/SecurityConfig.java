@@ -41,7 +41,9 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(request -> {
                     var corsConfiguration = new CorsConfiguration();
                     corsConfiguration.setAllowedOriginPatterns(List.of("*"));
-                    corsConfiguration.setAllowedOrigins(List.of("*"));
+                    corsConfiguration.setAllowedOrigins(List.of(
+                            "https://aichatpsychologist-bfytefqyj-martinkaoffs-projects.vercel.app/",
+                            "https://localhost:3000"));
                     corsConfiguration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                     corsConfiguration.setAllowedHeaders(List.of("*"));
                     corsConfiguration.setAllowCredentials(true);
