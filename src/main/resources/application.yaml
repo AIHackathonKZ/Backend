@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: koyeb-adm
+    password: p1ehgoCF7WvI
+    url: jdbc:postgresql://ep-dark-frog-a26t6pee.eu-central-1.pg.koyeb.app:5432/koyebdb?sslmode=require
+
+  jpa:
+    database: postgresql
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/changelog-master.yaml
+    liquibase-schema: public
+
+  mail:
+    host: smtp.gmail.com
+    username: corpaidecentrathon@gmail.com
+    password: ixseaiavnkbdgirb
+    port: 587
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+
+
+jwt:
+  secret-key: 9599c38a1285bb2b8f038040ea5bcd1d625f12db5b98ac26beb526a7ea831cdf
+  lifetime: 3600000
+
+
+server:
+  port: 8085
